@@ -3,6 +3,6 @@ Upstream-Name: diroom
 Upstream-Contact: Daniel Morandini <danielmorandini@me.com>
 Source: github.com/jecoz/diroom
 
-Files: README.md
+Files: README.md example_config.yaml go.mod go.sum
 Copyright: 2020 jecoz <danielmorandini@me.com>
 License: MIT
