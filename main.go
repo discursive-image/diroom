@@ -86,7 +86,6 @@ func main() {
 		}()
 	}
 
-
 	// Prepare environment.
 	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", config.AppCreds)
 	os.Setenv("PATH", filepath.Dir(os.Args[0]))
