@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+[submodule "diin"]
+	path = diin
+	url = https://github.com/jecoz/diin.git
+[submodule "dic"]
+	path = dic
+	url = https://github.com/jecoz/dic.git
+[submodule "dis"]
+	path = dis
+	url = https://github.com/jecoz/dis.git
+[submodule "sgtr"]
+	path = sgtr
+	url = git@git.keepinmind.info:subgensdk/sgtr.git
