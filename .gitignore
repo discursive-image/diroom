@@ -5,3 +5,4 @@
 bin/
 dump.rdb
 .DS_Store
+config.yaml
