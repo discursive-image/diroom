@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+# di-cache is an helper script for running a redis-server instance.
+
+info() {
+	echo >&2 "`basename $0` * $1"
+}
+
+main() {
+	if [ ! -x $redis ]; then
+		error "missing required executable: $redis"
+		info "you can install it with homebrew (https://brew.sh) running:"
+		info "% brew install redis"
+		exit 1
+	fi
+
+	info "cache server address: localhost:${port}"
+	$redis
+}
+
+# TODO: we could parse flags here, providing these values below as default ones.
+
+port=6379
+redis=`command -v redis-server`
+
+main
