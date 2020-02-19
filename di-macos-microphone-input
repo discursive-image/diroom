@@ -14,7 +14,7 @@ main() {
 		exit 1
 	fi
 	if [ ! -x $sgtr ]; then
-		error "missing required executable: sgtr"
+		error "missing required executable: $sgtr"
 		info "you can compile the executable with:"
 		info "% make"
 		exit 1
