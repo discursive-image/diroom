@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+error() {
+	echo >&2 "`basename $0` * error: $1"
+}
+
+info() {
+	echo >&2 "`basename $0` * $1"
+}
+
+main() {
+	if [ ! -x $ffmpeg ]; then
+		error "missing required executable: ffmpeg"
+		info "you can install it with homebrew (https://brew.sh) running:"
+		info "% brew install ffmpeg"
+		exit 1
+	fi
+	if [ ! -x $sgtr ]; then
+		error "missing required executable: sgtr"
+		info "you can compile the executable with:"
+		info "% make"
+		exit 1
+	fi
+
+	mkdir -p $wd
+	$ffmpeg -f avfoundation -i ":0" -f mp3 - 2> /dev/null | $sgtr -s -interim -lang $lang -i 10 -lp $logfile | tee $trfile
+}
+
+ffmpeg=`command -v ffmpeg`
+sgtr=bin/sgtr
+wd=".workdir"
+logfile="${wd}/sgtr.log"
+trfile="${wd}/transcript.trr"
+lang="it-IT"
+
+main
