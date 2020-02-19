@@ -20,7 +20,7 @@ main() {
 		exit 1
 	fi
 
-	tail -f ${trfile} | $dic | $dis -p ${server_port}
+	tail -f ${trfile} | $dic -ra localhost:${cache_port} | cut -d ',' -f 1-3,6 | $dis -p ${server_port}
 }
 
 main
