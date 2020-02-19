@@ -7,6 +7,7 @@
 source dirc
 
 main() {
+
 	if [ ! -x $dic ]; then
 		error "missing required executable: $dic"
 		info "you can compile the executable with:"
@@ -20,7 +21,6 @@ main() {
 		exit 1
 	fi
 
-	echo $@
 	for arg in "$@"
 	do
 		case $arg in
@@ -31,6 +31,8 @@ main() {
 		esac
 	done
 
+	mkdir -p ${wd}
+	touch ${trfile}
 	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port}
 }
 
