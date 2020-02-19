@@ -16,7 +16,6 @@ main() {
 		exit 1
 	fi
 
-	info "cache server address: localhost:${cache_port}"
 	$redis --port ${cache_port}
 }
 
