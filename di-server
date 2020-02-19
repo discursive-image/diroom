@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+source dirc
+
+main() {
+	if [ ! -x $dic ]; then
+		error "missing required executable: $dic"
+		info "you can compile the executable with:"
+		info "% make"
+		exit 1
+	fi
+	if [ ! -x $dis ]; then
+		error "missing required executable: $dis"
+		info "you can compile the executable with:"
+		info "% make"
+		exit 1
+	fi
+
+	tail -f ${trfile} | $dic | $dis -p ${server_port}
+}
+
+main
