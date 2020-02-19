@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+error() {
+	echo >&2 "`basename $0` * error: $1"
+}
+
+info() {
+	echo >&2 "`basename $0` * $1"
+}
+
+ffmpeg=`command -v ffmpeg`
+sgtr=bin/sgtr
+wd=".workdir"
+logfile="${wd}/sgtr.log"
+trfile="${wd}/transcript.trr"
+lang="it-IT"
+cache_port=6379
+redis=`command -v redis-server`

@@ -4,13 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-error() {
-	echo >&2 "`basename $0` * error: $1"
-}
-
-info() {
-	echo >&2 "`basename $0` * $1"
-}
+source dirc
 
 main() {
 	if [ ! -x $ffmpeg ]; then
@@ -29,14 +23,5 @@ main() {
 	mkdir -p $wd
 	$ffmpeg -f avfoundation -i ":0" -f mp3 - 2> /dev/null | $sgtr -s -interim -lang $lang -i 10 -lp $logfile | tee $trfile
 }
-
-# TODO: we could parse flags here, providing these values below as default ones.
-
-ffmpeg=`command -v ffmpeg`
-sgtr=bin/sgtr
-wd=".workdir"
-logfile="${wd}/sgtr.log"
-trfile="${wd}/transcript.trr"
-lang="it-IT"
 
 main

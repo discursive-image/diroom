@@ -6,9 +6,7 @@
 
 # di-cache is an helper script for running a redis-server instance.
 
-info() {
-	echo >&2 "`basename $0` * $1"
-}
+source dirc
 
 main() {
 	if [ ! -x $redis ]; then
@@ -18,13 +16,8 @@ main() {
 		exit 1
 	fi
 
-	info "cache server address: localhost:${port}"
+	info "cache server address: localhost:${cache_port}"
 	$redis
 }
-
-# TODO: we could parse flags here, providing these values below as default ones.
-
-port=6379
-redis=`command -v redis-server`
 
 main
