@@ -32,6 +32,16 @@ builds:
       - darwin
     goarch:
       - amd64
+  -
+    id: echoclient
+    dir: dis
+    main: cmd/client.go
+    binary: bin/echoclient
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
 archives:
   -
     id: diroom
