@@ -30,6 +30,8 @@ main() {
 	$ffmpeg -f avfoundation -i ":0" -f mp3 - 2> /dev/null | $sgtr -s -interim -lang $lang -i 10 -lp $logfile | tee $trfile
 }
 
+# TODO: we could parse flags here, providing these values below as default ones.
+
 ffmpeg=`command -v ffmpeg`
 sgtr=bin/sgtr
 wd=".workdir"
