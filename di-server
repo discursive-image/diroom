@@ -20,7 +20,18 @@ main() {
 		exit 1
 	fi
 
-	tail -f ${trfile} | $dic -ra "localhost:${cache_port}" | $dis -p ${server_port}
+	echo $@
+	for arg in "$@"
+	do
+		case $arg in
+			-c|--cache)
+			cache_flag="-ra localhost:${cache_port}"
+			shift
+			;;
+		esac
+	done
+
+	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port}
 }
 
-main
+main $@
