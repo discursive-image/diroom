@@ -17,7 +17,7 @@ main() {
 	fi
 
 	info "cache server address: localhost:${cache_port}"
-	$redis
+	$redis -p ${cache_port}
 }
 
 main
