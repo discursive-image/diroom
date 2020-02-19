@@ -1,0 +1,45 @@
+project_name: diroom
+env:
+  - GO111MODULE=on
+builds:
+  -
+    id: sgtr
+    dir: sgtr
+    main: cmd/main.go
+    binary: bin/sgtr
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+  -
+    id: dis
+    dir: dis
+    main: cmd/main.go
+    binary: bin/dis
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+  -
+    id: dic
+    dir: dic
+    main: cmd/main.go
+    binary: bin/dic
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+archives:
+  -
+    id: diroom
+    wrap_in_directory: true
+    files:
+    - LICENSES/*
+    - README.md
+    - di-*
+    - dirc
+signs:
+  - artifacts: checksum
