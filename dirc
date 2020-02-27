@@ -14,12 +14,14 @@ info() {
 
 ffmpeg=`command -v ffmpeg`
 sgtr=bin/sgtr
-wd=".workdir"
-logfile="${wd}/sgtr.log"
-trfile="${wd}/transcript.trr"
-lang="it-IT"
-cache_port=7746
 redis=`command -v redis-server`
 dic=bin/dic
 dis=bin/dis
+
+wd="workdir"
+logfile="${wd}/sgtr.log"
+trfile="${wd}/transcript.strr"
+
+lang="it-IT"
+cache_port=7746
 server_port=7745
