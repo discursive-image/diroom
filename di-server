@@ -33,7 +33,7 @@ main() {
 
 	mkdir -p ${wd}
 	touch ${trfile}
-	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port}
+	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port} -wd "${wd}/images"
 }
 
 main $@
