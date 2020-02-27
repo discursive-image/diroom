@@ -6,6 +6,7 @@
 
 # di-cache is an helper script for running a redis-server instance.
 
+cd `dirname "${BASH_SOURCE[0]}"`
 source dirc
 
 main() {
