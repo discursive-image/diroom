@@ -20,3 +20,6 @@
 [submodule "redis"]
 	path = redis
 	url = https://github.com/antirez/redis.git
+[submodule "dishow"]
+	path = dishow
+	url = https://github.com/AndreaKaus/dishow.git
