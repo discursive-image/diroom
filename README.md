@@ -1,5 +1,5 @@
 # the Discursive Image Room
-This tool acts as orchestrator between the **discorsive image** tool suite.
+This tool acts as orchestrator between the **discursive image** tool suite.
 
 ### Read This First
 You have to install some dependencies to make this work:
