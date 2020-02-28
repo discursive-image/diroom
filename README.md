@@ -67,7 +67,7 @@ websocket `dis` server, while `replayplayer` can be used to read from the *.strr
 were written, hence reproducing the speed at which the file was written in during the live transcription
 session.
 
-### The Show :wip:
+### The Show :construction:
 To consume the data produced by the server properly, `diroom` provides the
 [official dishow frontend app](https://github.com/AndreaKaus/dishow) module: it is a React app that
 connects to a `dis` websocket and consumes the discursive images it sends, showing them on the screen
