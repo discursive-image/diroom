@@ -51,5 +51,8 @@ archives:
     - README.md
     - di-*
     - dirc
+    - dishow/*
+    - dishow/public/*
+    - dishow/src/*
 signs:
   - artifacts: checksum
