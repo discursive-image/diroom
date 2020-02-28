@@ -8,3 +8,4 @@ dump.rdb
 config.yaml
 .workdir
 dist/
+workdir
