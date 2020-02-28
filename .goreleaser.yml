@@ -42,6 +42,17 @@ builds:
       - darwin
     goarch:
       - amd64
+  -
+    id: replayreader
+    dir: dis
+    main: cmd/replayreader.go
+    binary: bin/replayreader
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+
 archives:
   -
     id: diroom
