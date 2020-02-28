@@ -75,9 +75,7 @@ for a configurable amount of time, one after the other :tada:.
 We will start an HTTP server serving the app on localhost (yes, we're still using the development
 environment, we're still working on that):
 ```
-% cd dishow
-% yarn # to fetch all dependencies \o/
-% yarn start
+% ./di-show
 ```
 By default the app will be available at `http://localhost:3000`.
 
