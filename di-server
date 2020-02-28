@@ -4,10 +4,10 @@
 #
 # SPDX-License-Identifier: MIT
 
-cd `dirname "${BASH_SOURCE[0]}"`
-source dirc
-
 main() {
+	cd `dirname "${BASH_SOURCE[0]}"`
+	source dirc
+
 	if [ ! -x $dic ]; then
 		error "missing required executable: $dic"
 		info "you can compile the executable with:"

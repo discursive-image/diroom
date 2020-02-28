@@ -6,10 +6,10 @@
 
 # di-cache is an helper script for running a redis-server instance.
 
-cd `dirname "${BASH_SOURCE[0]}"`
-source dirc
-
 main() {
+	cd `dirname "${BASH_SOURCE[0]}"`
+	source dirc
+
 	if [ ! -x $redis ]; then
 		error "missing required executable: $redis"
 		info "you can install it with homebrew (https://brew.sh) running:"

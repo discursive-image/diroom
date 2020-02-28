@@ -4,10 +4,10 @@
 #
 # SPDX-License-Identifier: MIT
 
-cd `dirname "${BASH_SOURCE[0]}"`
-source dirc
-
 main() {
+	cd `dirname "${BASH_SOURCE[0]}"`
+	source dirc
+
 	if [ ! -x $ffmpeg ]; then
 		error "missing required executable: ffmpeg"
 		info "you can install it with homebrew (https://brew.sh) running:"
