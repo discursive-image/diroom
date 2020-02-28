@@ -6,6 +6,7 @@ You have to install some dependencies to make this work:
 - [ffmpeg](https://ffmpeg.org): for audio transcoding (4.2.2).
 - [Go](https://golang.org): for building the dependencies (go1.13.8).
 - [redis](https://redis.io) (optional): for caching the image links (999.999.999).
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable) (optional): to build and serve the [dishow](https://github.com/AndreaKaus/dishow).
 
 **Disclaimer**: `sgtr` is still proprietary software :-( I hope I'll be allowed to free it soon, then I'll add the installation guide from source, at the moment it does not make much sense. The binary is provided though, checkout the release section!
 
@@ -54,11 +55,32 @@ any input. Run:
 % ./di-macos-microphone-input
 ```
 
-You can consume the images using the provided `bin/echoclient`, which connects to the server and just
-echoes what it receives.
+Inside the `dis` submodule you'll find some useful binaries for connecting (and testing) the websocket
+server and for reading streaming transcript raw files (*.strr). To build them, move to the `dis` module
+and build the examples:
+```
+% cd dis
+% make examples
+```
+Which will be stored inside the `dis/bin` subfolder. `echoclient` can be used to connect to the running
+websocket `dis` server, while `replayplayer` can be used to read from the *.strr files at the rate they
+were written, hence reproducing the speed at which the file was written in during the live transcription
+session.
 
-For the actual magic, use the [official dishow frontend app](https://github.com/AndreaKaus/dishow)! :tada:
+### The Show :wip:
+To consume the data produced by the server properly, `diroom` provides the
+[official dishow frontend app](https://github.com/AndreaKaus/dishow) module: it is a React app that
+connects to a `dis` websocket and consumes the discursive images it sends, showing them on the screen
+for a configurable amount of time, one after the other :tada:.
+We will start an HTTP server serving the app on localhost (yes, we're still using the development
+environment, we're still working on that):
+```
+% cd dishow
+% yarn # to fetch all dependencies \o/
+% yarn start
+```
+By default the app will be available at `http://localhost:3000`.
 
-#### Notes
+### Notes
 It is possible to stop the input without affecting the server, and vice-versa.
 
