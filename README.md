@@ -54,18 +54,11 @@ any input. Run:
 ```
 % ./di-macos-microphone-input
 ```
-
-Inside the `dis` submodule you'll find some useful binaries for connecting (and testing) the websocket
-server and for reading streaming transcript raw files (*.strr). To build them, move to the `dis` module
-and build the examples:
-```
-% cd dis
-% make examples
-```
-Which will be stored inside the `dis/bin` subfolder. `echoclient` can be used to connect to the running
-websocket `dis` server, while `replayplayer` can be used to read from the *.strr files at the rate they
-were written, hence reproducing the speed at which the file was written in during the live transcription
-session.
+Inside `bin` you'll find some useful binaries for connecting (and testing) the websocket
+server and for reading streaming transcript raw files (*.strr).
+The `echoclient` can be used to connect to the running websocket `dis` server, while the `replayplayer`
+can be used to read from the *.strr files at the rate they were written, hence reproducing the speed 
+at which the file was written in during the live transcription session.
 
 ### The Show :construction:
 To consume the data produced by the server properly, `diroom` provides the
