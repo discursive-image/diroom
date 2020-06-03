@@ -34,7 +34,7 @@ main() {
 	mkdir -p ${wd}
 	touch ${trfile}
 	echo "--- reading transcript from ${trfile}"
-	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port} -wd "${wd}/images" -s "all"
+	tail -f ${trfile} | $dic $cache_flag | $dis -p ${server_port} --sd "${wd}/images"
 }
 
 main $@
