@@ -15,7 +15,7 @@ builds:
   -
     id: dis
     dir: dis
-    main: cmd/main.go
+    main: cmd/dis/main.go
     binary: bin/dis
     goos:
       - linux
@@ -35,7 +35,7 @@ builds:
   -
     id: echoclient
     dir: dis
-    main: cmd/client.go
+    main: cmd/echoclient/main.go
     binary: bin/echoclient
     goos:
       - linux
@@ -45,7 +45,7 @@ builds:
   -
     id: replayreader
     dir: dis
-    main: cmd/replayreader.go
+    main: cmd/replayreader/main.go
     binary: bin/replayreader
     goos:
       - linux
