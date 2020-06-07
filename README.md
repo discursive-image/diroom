@@ -5,7 +5,6 @@ This tool acts as orchestrator between the **discursive image** tool suite.
 You have to install some dependencies to make this work:
 - [ffmpeg](https://ffmpeg.org): for audio transcoding (4.2.2).
 - [Go](https://golang.org): for building the dependencies (go1.13.8).
-- [redis](https://redis.io) (optional): for caching the image links (999.999.999).
 - [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable) (optional): to build and serve the [dishow](https://github.com/AndreaKaus/dishow).
 
 **Disclaimer**: `sgtr` is still proprietary software :-( I hope I'll be allowed to free it soon, then I'll add the installation guide from source, at the moment it does not make much sense. The binary is provided though, checkout the release section!
@@ -34,19 +33,13 @@ The release contains some helper scripts that make life easier to start the tool
 out if you want to understand how they're glued together.
 
 These are the steps required to start a `diroom`:
-If you need/want links to be cached (optimized google search usage), start the redis server in
-one terminal with:
-```
-% ./di-cache
-```
-Now open a new terminal tab (or a new terminal, but of course in the same directory) and start
+Open a new terminal tab (or a new terminal, but of course in the same directory) and start
 the server with:
 ```
-% ./di-server --cache
+% ./di-server
 ```
-If you did not start a redis instance, just drop the `--cache` flag. You now have a websocket server
-listening, checkout it's logs to find the port. You can connect to its "/di/stream" path to receive
-the stream of links, but first...
+You now have a websocket server listening, checkout it's logs to find the port. You can connect to
+its "/di/stream" path to receive the stream of links, but first...
 
 (macOS stuff here)
 We want now to transcode microphone's input and send it to the server, otherwise we would not have
