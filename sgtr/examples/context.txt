@@ -1,6 +1,0 @@
-git
-Gerrit
-Brad Fitzpatrick
-Andrew Gerrand
-Go
-Mercurial

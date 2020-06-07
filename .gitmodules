@@ -11,3 +11,6 @@
 [submodule "dishow"]
 	path = dishow
 	url = https://github.com/AndreaKaus/dishow.git
+[submodule "trnscr"]
+	path = trnscr
+	url = git@git.keepinmind.info:subgensdk/trnscr.git
