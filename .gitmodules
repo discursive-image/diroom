@@ -11,3 +11,6 @@
 [submodule "trnscr"]
 	path = trnscr
 	url = git@git.keepinmind.info:subgensdk/trnscr.git
+[submodule "dic"]
+	path = dic
+	url = https://github.com/discursive-image/dic.git

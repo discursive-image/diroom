@@ -38,6 +38,8 @@ github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMn
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/discursive-image/dic v0.3.5 h1:LPcMg+0XohuERyFj0WREuGD80C7pwdw2qKJYqVoMrdI=
+github.com/discursive-image/dic v0.3.5/go.mod h1:Je0OqH3L8eKNtDU0vlHyEG9RI4PS3i7irIPwFchLrdE=
 github.com/discursive-image/dis v0.4.3 h1:s3dKTAOMpUKMjqGmjJeyCg8fSJkhWkZTr3UKoKsHSXM=
 github.com/discursive-image/dis v0.4.3/go.mod h1:OP2gsr2Fd8Meh0qyWnpqdofNohDM0X/gu0m+N14gOYk=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
