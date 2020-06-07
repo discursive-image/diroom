@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2020 KIM KeepInMind GmbH
+#
+# SPDX-License-Identifier: MIT
+
+project_name: sgtr
+env:
+  - GO111MODULE=on
+builds:
+  -
+    binary: bin/{{ .ProjectName }}
+    main: ./cmd/main.go
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+blobs:
+  -
+    provider: s3
+    bucket: kim-toolset
+    region: eu-central-1
+    folder: "subgensdk/{{ .ProjectName }}/{{ .Version }}"
+release:
+  disable: true
+
+signs:
+  - artifacts: checksum
+    args: ["--batch", "-u", "B3FF19F50CFF9A0ADCC93DFD99FDC72117DCA8D4", "--output", "${signature}", "--detach-sign", "${artifact}"]
+changelog:
+  sort: asc

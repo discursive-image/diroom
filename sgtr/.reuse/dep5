@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: sgtr
+Upstream-Contact: Daniel Morandini <daniel.morandini@keepinmind.info>
+Source: http://git.keepinmind.info/subgensdk/sgtr
+
+Files: go.mod go.sum examples/*
+Copyright: $YEAR $NAME <$CONTACT>
+License: MIT

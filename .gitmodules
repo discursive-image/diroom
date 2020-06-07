@@ -8,9 +8,6 @@
 [submodule "dis"]
 	path = dis
 	url = https://github.com/discursive-image/dis.git
-[submodule "sgtr"]
-	path = sgtr
-	url = git@git.keepinmind.info:subgensdk/sgtr.git
 [submodule "dishow"]
 	path = dishow
 	url = https://github.com/AndreaKaus/dishow.git

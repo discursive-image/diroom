@@ -23,7 +23,7 @@ main() {
 
 	mkdir -p $wd
 	echo "--- writing transcript to ${trfile}"
-	$ffmpeg -f avfoundation -i ":0" -f mp3 - 2> /dev/null | $sgtr -s -lang $lang -i 10 -lp $logfile | tee -i -a ${trfile}
+	$ffmpeg -f avfoundation -i ":0" -f mp3 - 2> /dev/null | trnscr -s -lang $lang -i 10 -v | tee -i -a ${trfile}
 }
 
 main
