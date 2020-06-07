@@ -3,10 +3,10 @@ env:
   - GO111MODULE=on
 builds:
   -
-    id: sgtr
-    dir: sgtr
-    main: cmd/main.go
-    binary: bin/sgtr
+    id: trnscr
+    dir: trnscr
+    main: cmd/trnscr/main.go
+    binary: bin/trnscr
     goos:
       - linux
       - darwin

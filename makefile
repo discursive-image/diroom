@@ -9,6 +9,7 @@ all: trnscr dic dis
 trnscr: bin/trnscr
 bin/trnscr:
 	go build -o $@ trnscr/cmd/trnscr/main.go
+dic: bin/dic
 bin/dic:
 	go build -o $@ dic/cmd/main.go
 dis: bin/dis

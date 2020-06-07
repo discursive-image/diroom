@@ -7,7 +7,7 @@ You have to install some dependencies to make this work:
 - [Go](https://golang.org): for building the dependencies (go1.13.8).
 - [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable) (optional): to build and serve the [dishow](https://github.com/AndreaKaus/dishow).
 
-**Disclaimer**: `sgtr` is still proprietary software :-( I hope I'll be allowed to free it soon, then I'll add the installation guide from source, at the moment it does not make much sense. The binary is provided though, checkout the release section!
+**Disclaimer**: `trnscr` is still proprietary software :-( I hope I'll be allowed to free it soon, then I'll add the installation guide from source, at the moment it does not make much sense. The binary is provided though, checkout the release section!
 
 ### Installation
 Just pick your [release](https://github.com/jecoz/diroom/releases)!
