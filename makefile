@@ -8,13 +8,13 @@ GO111MODULE := on
 all: trnscr dic dis
 trnscr: bin/trnscr
 bin/trnscr:
-	go build -o $@ trnscr/cmd/trnscr/main.go
+	(cd trnscr && go build -o ../$@ cmd/trnscr/main.go)
 dic: bin/dic
 bin/dic:
-	go build -o $@ dic/cmd/main.go
+	(cd dic && go build -o ../$@ cmd/main.go)
 dis: bin/dis
 bin/dis:
-	go build -o $@ dis/cmd/dis/main.go
+	(cd dis && go build -o ../$@ cmd/dis/main.go)
 
 format:
 	go fmt ./...
