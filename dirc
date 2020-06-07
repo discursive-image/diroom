@@ -21,6 +21,7 @@ dis=bin/dis
 wd="workdir"
 logfile="${wd}/sgtr.log"
 trfile="${wd}/transcript.strr"
+dicout="${wd}/transcript+images.csv"
 
 lang="it-IT"
 cache_port=7746
