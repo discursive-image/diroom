@@ -4,8 +4,8 @@
 
 GO111MODULE := on
 
-.PHONY: trnscr dic dis
-all: trnscr dic dis
+.PHONY: trnscr dic dis listenrtmp
+all: trnscr dic dis listenrtmp
 trnscr: bin/trnscr
 bin/trnscr:
 	(cd trnscr && go build -o ../$@ cmd/trnscr/main.go)
@@ -15,6 +15,10 @@ bin/dic:
 dis: bin/dis
 bin/dis:
 	(cd dis && go build -o ../$@ cmd/dis/main.go)
+
+listenrtmp: bin/listenrtmp
+bin/listenrtmp:
+	(cd rtmpsrv && go build -o ../$@ cmd/listenrtmp/main.go)
 
 format:
 	go fmt ./...

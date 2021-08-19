@@ -13,6 +13,7 @@ info() {
 }
 
 ffmpeg=`command -v ffmpeg`
+rtmpsrv=bin/listenrtmp
 trnscr=bin/trnscr
 dic=bin/dic
 dis=bin/dis
@@ -22,6 +23,7 @@ logfile="${wd}/sgtr.log"
 trfile="${wd}/transcript.strr"
 dicout="${wd}/transcript+images.csv"
 
-lang="it-IT"
+lang="de-DE"
 cache_port=7746
 server_port=7745
+rtmp_port=3500

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2020 jecoz
+#
+# SPDX-License-Identifier: MIT
+
+main() {
+	cd `dirname "${BASH_SOURCE[0]}"`
+	source dirc
+
+	if [ ! -x $ffmpeg ]; then
+		error "missing required executable: ffmpeg"
+		info "you can install it with homebrew (https://brew.sh) running:"
+		info "% brew install ffmpeg"
+		exit 1
+	fi
+	if [ ! -x $sgtr ]; then
+		error "missing required executable: $sgtr"
+		info "you can compile the executable with:"
+		info "% make"
+		exit 1
+	fi
+
+	mkdir -p $wd
+	echo "--- writing transcript to ${trfile}"
+	$rtmpsrv -p $rtmp_port | $trnscr -s -lang $lang -i 10 -v | tee -i -a ${trfile}
+}
+
+main

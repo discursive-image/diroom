@@ -14,3 +14,6 @@
 [submodule "dic"]
 	path = dic
 	url = https://github.com/discursive-image/dic.git
+[submodule "rtmpsrv"]
+	path = rtmpsrv
+	url = https://git.keepinmind.info/subgensdk/rtmpsrv.git
